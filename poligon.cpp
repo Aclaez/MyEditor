@@ -123,6 +123,7 @@ void Poligon::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         QGraphicsEllipseItem* ellipseItem = new QGraphicsEllipseItem(rect);
         ellipseItem->setBrush(brush);
         ellipseItem->setPen(QPen(penColor,weightPen));
+        ellipseItem->setRect(ellipseItem->boundingRect());
         addItem(ellipseItem);
 
         previousEllipse = ellipseItem;
